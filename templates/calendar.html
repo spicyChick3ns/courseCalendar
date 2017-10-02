@@ -2,12 +2,53 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
-        <title>My Calendar</title>
+        <title>courseCalendar</title>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.css"/>
+        <link rel="stylesheet" href="css/stylesheet.css">
     </head>
-    <body>
-        <div id="calendar"></div>
+    <style>
+    * {
+      font-family: sans-serif;
+    }
+      #calendar {
+        text-align: center;
+        color: #3949AB;
+        width:auto;
+      }
+      #begin {
+        text-align: center;
+        color: #F57C00;
+      }
+      .iconImage {
+        width:30px;
+        height:30px;
+      }
+      p {
+        color:#D81B60;
+      }
+      #avenue {
+        width:90px;
+        height: 15px;
+        padding: 5px;
+      }
 
+    </style>
+
+
+    <body>
+      <div id="begin">
+        <h1> CourseCalendar</h1>
+        <p> This is a calendar that uses the Slim Framework to interface with the MySQL server containing a database. Currently has some events for the 3A term and some extra curriculars.</p>
+        <a href="https://github.com/spicychick3ns/courseCalendar">
+          <img class="iconImage" src = "https://image.flaticon.com/icons/png/512/25/25231.png">
+        </a>
+
+
+        <a href="https://avenue.mcmaster.ca">
+          <img id="avenue" src="http://avenue.mcmaster.ca/images/avenue_logo.jpg">
+        </a>
+      </div>
+        <div id="calendar"></div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script>
         <script>
@@ -20,7 +61,6 @@
                             title: rawEventData.title,
                             start: rawEventData.start,
                             end: rawEventData.end,
-                            // url: rawEventData.url
                         };
                     }
                 });
